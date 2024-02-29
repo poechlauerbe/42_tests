@@ -1,2 +1,4 @@
+# 42_tests
+
 cat | cat | ls // no sigpipe error
 echo hi | < exist // no sigpipe error
