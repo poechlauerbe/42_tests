@@ -1,2 +1,9 @@
 cat | cat | ls // no sigpipe error
+
 echo hi | < exist // no sigpipe error
+
+export a="s -lsa"
+l$a // command should be executed
+
+
+
