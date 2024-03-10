@@ -1,0 +1,19 @@
+test with valgrind --tools=helgrind (for threads)
+test with valgrind (for malloc errors)
+(if necessary put an usleep in the checker function - mine only worked then)
+
+Allowed functions:
+memset, printf, malloc, free, write,
+usleep, gettimeofday, pthread_create,
+pthread_detach, pthread_join, pthread_mutex_init,
+pthread_mutex_destroy, pthread_mutex_lock,
+pthread_mutex_unlock
+
+NO exit function ALLOWED!
+
+Check in the code if this functions are protected/the errors are handled:
+- malloc
+- usleep
+- gettimeofday
+- pthread_create
+- pthread_mutex_init
