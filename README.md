@@ -28,4 +28,4 @@ Check the code:
 Know what you are doing - learn about your testing tools!
 If you haven't accomplished a project - maybe try to test some project you find on github.
 
-test specially for the project - see other files in the github project
+tests specially for the project - see other files in the github project
