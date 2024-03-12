@@ -13,7 +13,7 @@ general tests:
 - Check with funcheck (is limited with multiprocess stuff)
 
 Check the code:
-- Search for unprotected malloc / functions (even printf/write can fail - so let the evaluated people argue why the choose to not protect the something - mallocs have always to be protected)
+- Search for unprotected malloc / functions (even printf/write can fail - so let the evaluated people argue why they choose to not protect something - mallocs have always to be protected)
 - Check if errors are printed in Standard error (fd=2)
 - Check exits (especially if exit is not allowed)
 - Let some malloc/function fail manually and see if everything is freed correctly (you can use static ints if some function is called more than once and for example let the 4. call of the function fail with some if + return/exit function which is used at that point. Best place is to put it just before the malloc / function.
