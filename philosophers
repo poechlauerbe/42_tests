@@ -2,6 +2,10 @@ test with valgrind --tools=helgrind (for threads)
 test with valgrind (for malloc errors)
 (if necessary put an usleep in the checker function - mine only worked then)
 
+Use visualizer like https://nafuka11.github.io/philosophers-visualizer/ (to see if the patterns seem right)
+
+Use tester like
+
 Allowed functions:
 memset, printf, malloc, free, write,
 usleep, gettimeofday, pthread_create,
@@ -15,5 +19,6 @@ Check in the code if this functions are protected/the errors are handled:
 - malloc
 - usleep
 - gettimeofday
-- pthread_create
+- pthread_create (if this fails the loop with pthread_join/pthread_detach has to have a changed value - only wait for the created values)
 - pthread_mutex_init
+
