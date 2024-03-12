@@ -1,6 +1,6 @@
-test with valgrind --tools=helgrind (for threads)
-test with valgrind (for malloc errors)
+test with valgrind --tools=helgrind (for threads - seems to be more precise than fsanitize)
 (if necessary put an usleep in the checker function - mine only worked then)
+test with valgrind (for malloc errors)
 
 Use visualizer like https://nafuka11.github.io/philosophers-visualizer/ (to see if the patterns seem right)
 
