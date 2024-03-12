@@ -11,6 +11,12 @@ general tests:
 - Check with ulimits
 - Check with valgrind (also with options like --track-fds=yes for open file descriptors)
 - Check with funcheck (is limited with multiprocess stuff)
+- Check edgecases (INT_MAX, INT_MIN)
+	- Int min: -2147483648
+	- Int max: 2147483647
+- Check not allowed input (empty quotes "", " ", wrong signs)
+	- "" shouldn't be handled as 0
+- Check too many/less arguments
 
 Check the code:
 - Search for unprotected malloc / functions (even printf/write can fail - so let the evaluated people argue why they choose to not protect something - mallocs have always to be protected)
