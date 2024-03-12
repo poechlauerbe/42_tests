@@ -5,6 +5,10 @@ valgrind --suppressions=valgrind_ignore_leaks.txt --leak-check=full --show-leak-
 
 You can also make a makefile rule - then you don't have to type the whole command every time.
 
+If the evaluated people provide a suppression file - make sure to check it.
+
+Attention - also some standard functions like ls can leak. If not sure - check bash with valgrind and then type in the same command.
+
 Some testcases:
 
 cat | cat | ls // no sigpipe error
