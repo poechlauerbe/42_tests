@@ -2,7 +2,7 @@
 
 This site is my personal testing/evaluating site for 42 projects.
 
-I'm still at the start of setting this up - so if you have any ideas / add ons - let me know.
+I'm still at the beginning of setting this up - so if you have any ideas / add ons - let me know.
 
 general tests:
 - nm -u program // to see the external used functions
