@@ -9,7 +9,7 @@ general tests:
 - input: wrong argc, digits mixed with letters
 - check function limits (usleep has limit uint max for example)
 - Check with ulimits
-- Check with valgrind
+- Check with valgrind (also with options like --track-fds=yes for open file descriptors)
 - Check with funcheck (is limited with multiprocess stuff)
 
 Check the code:
