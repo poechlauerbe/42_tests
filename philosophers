@@ -4,7 +4,7 @@ test with valgrind (for malloc errors)
 
 Use visualizer like https://nafuka11.github.io/philosophers-visualizer/ (to see if the patterns seem right)
 
-Use tester like
+Use tester like https://github.com/dantonik/42-philosophers-tester
 
 Allowed functions:
 memset, printf, malloc, free, write,
