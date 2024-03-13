@@ -2,6 +2,8 @@
 
 This site is my personal testing/evaluating site for 42 projects.
 
+If you like it - it would be nice of you to leave a star :)
+
 I'm still at the beginning of setting this up - so if you have any ideas / add ons - let me know.
 
 general tests:

@@ -9,6 +9,10 @@ If the evaluated people provide a suppression file - make sure to check it.
 
 Attention - also some standard functions like ls can leak. If not sure - check bash with valgrind and then type in the same command.
 
+
+IN PROGRESS...
+
+
 Some testcases:
 
 cat | cat | ls // no sigpipe error
