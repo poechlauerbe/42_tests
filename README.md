@@ -31,3 +31,11 @@ Know what you are doing - learn about your testing tools!
 If you haven't accomplished a project - maybe try to test some project you find on github.
 
 tests specially for the project - see other files in the github project
+
+
+Hope this helps when testing your stuff or a project from somebody else!
+
+Yours
+Benjamin
+
+P.s.: always be nice and polite when evaluating someone's project! They put lots of hours inside and are hoping to pass - so be kind! We are here to learn - not to put somebody down. Try to help people to get better coders!
