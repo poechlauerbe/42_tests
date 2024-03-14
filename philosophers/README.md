@@ -1,21 +1,25 @@
 # 42 Philosophers tests/evaluation
 
-This is my dedicated testing site for the 42 Philosopher project in C:
+This is my dedicated testing site for the 42 Philosopher project in C.
+
+If you are evaluating somebody you can use this as an addon. __Make sure to also test what's inside the evaluation sheet!__
 
 [Also see the general tests for all projects.](https://github.com/poechlauerbe/42_tests)
 
 ## general stuff
 
 1. Check for data races and lock errors with valgrind:
-```valgrind --tools=helgrind```
-	The execution of helgrind will slow down the whole execution of the process - so append the time to die a little
-	_If you only get one statement that somebody died there is a big chance that you have to modify the monitoring loop with something like usleep(100). Don't forget to remove it for the standard test!_
+```
+valgrind --tools=helgrind ./philo
+```
+- The execution of helgrind will slow down the whole execution of the process - so append the time to die a little.
+- _If you only get one statement that somebody died there is a big chance that you have to modify the monitoring loop with something like usleep(100). Don't forget to remove it for the standard test!_
 
-- test with valgrind (for malloc errors)
+- test with valgrind (for leaks) - in this case don't pay attention to the output - valgrind messes that up
 
 - Use visualizer like https://nafuka11.github.io/philosophers-visualizer/ (to see if the patterns seem right)
 
-- Use tester like https://github.com/dantonik/42-philosophers-tester
+- Use tester like https://github.com/dantonik/42-philosophers-tester (if something fails - try to reproduce it by hand, only use the hardcore tests for fun ;) )
 
 ## Allowed functions:
 > memset, printf, malloc, free, write, usleep, gettimeofday, pthread_create, pthread_detach, pthread_join, pthread_mutex_init, pthread_mutex_destroy, pthread_mutex_lock, pthread_mutex_unlock
@@ -42,18 +46,25 @@ __NO exit function ALLOWED!!!!__
 ./philo 3 650 20000 100 2
 ```
 
-
 4. Some other testcase:
 - dietime should be arround 650 (max + 10ms)
 ```
 ./philo 2 650 600 200 2
 ```
 
-Check in the code if this functions are protected/the errors are handled:
+## Check the code:
+
+1. Make sure there is no exit function
+
+2. Check in the code if this functions are protected/the errors are handled:
 - malloc
 - pthread_create (if this fails the loop with pthread_join/pthread_detach has to have a changed value - only wait for the created values)
 - pthread_mutex_init (if the second mutex init fails, make sure the first one is destroyed)
 
-I also implemented checking if this functions fail:
+3. Check if the error is handled properly and it will not come to leaks
+
+4. Check if the error is returned properly to the main.
+
+_I also implemented checking if this functions fail:
 - usleep (will fail if input is higher than unsigned int max)
-- gettimeofday
+- gettimeofday_
