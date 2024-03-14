@@ -26,7 +26,8 @@ __NO exit function ALLOWED!!!!__
 
 1. Test on your own if a synchronization for odd numbers is implemented:
 ```
-./philo 3 650 200 100 5```
+./philo 3 650 200 100 5
+```
 
 - at least repeating it 5-10 times (no one should die) - in case of problems use the visualizer
 
