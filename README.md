@@ -31,8 +31,8 @@ Know what you are doing - learn about your testing tools!
 _If you haven't accomplished a project - maybe try to test some project you find on github._
 
 Tests specially for the project - see other files in the github project
-- [philosophers](https://github.com/poechlauerbe/42_tests/tree/main/philosophers)
-- [minishell](https://github.com/poechlauerbe/42_tests/tree/main/minishell)
+- [c03 - philosophers](https://github.com/poechlauerbe/42_tests/tree/main/philosophers)
+- [c03 - minishell](https://github.com/poechlauerbe/42_tests/tree/main/minishell)
 
 
 Hope this helps when testing your stuff or a project from somebody else!
@@ -40,4 +40,4 @@ Hope this helps when testing your stuff or a project from somebody else!
 Yours
 Benjamin
 
-_P.s.: always be nice and polite when evaluating someone's project! They put lots of hours inside and are hoping to pass - so be kind! We are here to learn - not to put somebody down. Try to help people to get better coders!_
+_P.s.: always be nice and polite when evaluating someone's project! They put lots of hours inside and are hoping to pass - so don't put them down! We are here to learn! Be part of an enviroment where people can trust and learn from each other. And sure - try to help people to get better coders!_
