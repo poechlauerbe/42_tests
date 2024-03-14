@@ -4,7 +4,7 @@ This site is my personal testing/evaluating site for 42 projects.
 
 If you like it - it would be nice of you to leave a star :)
 
-I'm still at the beginning of setting this up - so if you have any ideas / add ons - let me know via [email](bpochlau@student.42vienna.com).
+I'm still at the beginning of setting this up - so if you have any ideas / add ons - let me know via the [discussion forum here on github](https://github.com/poechlauerbe/42_tests/discussions/1) or via [email](bpochlau@student.42vienna.com).
 
 ## general tests:
 - nm -u program // to see the external used functions
@@ -22,6 +22,7 @@ I'm still at the beginning of setting this up - so if you have any ideas / add o
 - Check too many/less arguments
 
 ## Check the code:
+- suggestion: use vscode by typing `code .` into the terminal
 - Search for unprotected malloc / functions (even printf/write can fail - so let the evaluated people argue why they choose to not protect something - __mallocs have always to be protected__)
 - Check if errors are printed in Standard error (fd=2)
 - Check exits in case of error (especially if exit is not allowed)

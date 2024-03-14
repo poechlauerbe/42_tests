@@ -17,8 +17,9 @@ This is my dedicated testing site for the 42 Philosopher project in C:
 > memset, printf, malloc, free, write, usleep, gettimeofday, pthread_create, pthread_detach, pthread_join, pthread_mutex_init, pthread_mutex_destroy, pthread_mutex_lock, pthread_mutex_unlock
 
 Test on your own if a synchronization for odd numbers is implemented:
-
-'''./philo 3 650 200 100 5''''
+```
+./philo 3 650 200 100 5
+```
 at least repeating it 5-10 times (no one should die) - in case of problems use the visualizer
 
 __NO exit function ALLOWED!!!!__
