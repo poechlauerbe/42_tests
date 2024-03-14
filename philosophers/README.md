@@ -32,21 +32,21 @@ __NO exit function ALLOWED!!!!__
 
 2. Test if the process is stopped immedeatly after someone dies:
 ```
-./philo 3 650 200 10000 2
+./philo 3 650 200 10000 2```
 
-	if you have to wait ten seconds until the program ends - it's not good
+- if you have to wait ten seconds until the program ends - it's not good
 
 3. Test if the process is stopped immedeatly after someone dies:
 ```
-./philo 3 650 20000 100 2
+./philo 3 650 20000 100 2```
 
-	somebody should die during eating and the process should be stopped
+- somebody should die during eating and the process should be stopped
 
 4. Some other testcase:
 ```
-./philo 2 650 600 200 2
+./philo 2 650 600 200 2```
 
-	dietime should be arround 650. (max + 10ms)
+- dietime should be arround 650. (max + 10ms)
 
 
 Check in the code if this functions are protected/the errors are handled:
