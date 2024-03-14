@@ -52,6 +52,17 @@ __NO exit function ALLOWED!!!!__
 ./philo 2 650 600 200 2
 ```
 
+5. Test with ulimit to check if the mallocs are protected
+- with ulimit you have to play arround a little to get the right size 
+
+```
+(ulimit -v 10000 ; ./philo 5 800 200 200)
+```
+
+```
+(ulimit -v 130000 ; valgrind ./philo 5 800 200 200)
+```
+
 ## Check the code:
 
 1. Make sure there is no exit function
