@@ -1,7 +1,11 @@
+# Minishell
+
+or like I would type minis-hell ;)
 
 For testing use a suppression file (see folder) and something like this:
-
+```
 valgrind --suppressions=valgrind_ignore_leaks.txt --leak-check=full --show-leak-kinds=all --track-origins=yes --show-mismatched-frees=yes	--track-fds=yes ./minishell
+```
 
 You can also make a makefile rule - then you don't have to type the whole command every time.
 
@@ -13,11 +17,20 @@ Attention - also some standard functions like ls can leak. If not sure - check b
 IN PROGRESS...
 
 
-Some testcases:
+## Some testcases:
 
-cat | cat | ls // no sigpipe error
+1. no sigpipe error
+```
+cat | cat | ls
+```
 
-echo hi | < exist // no sigpipe error
+2. no leaks
+```
+echo hi | < exist
+```
+```
+echo hi | < not_exist
+```
 
 export a="s -lsa"
 l$a // command should be executed
