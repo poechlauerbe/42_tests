@@ -27,25 +27,25 @@ __NO exit function ALLOWED!!!!__
 1. Test on your own if a synchronization for odd numbers is implemented:
 ```
 ./philo 3 650 200 100 5
-```
+
 	at least repeating it 5-10 times (no one should die) - in case of problems use the visualizer
 
 2. Test if the process is stopped immedeatly after someone dies:
 ```
 ./philo 3 650 200 10000 2
-```
+
 	if you have to wait ten seconds until the program ends - it's not good
 
 3. Test if the process is stopped immedeatly after someone dies:
 ```
 ./philo 3 650 20000 100 2
-```
+
 	somebody should die during eating and the process should be stopped
 
 4. Some other testcase:
 ```
 ./philo 2 650 600 200 2
-```
+
 	dietime should be arround 650. (max + 10ms)
 
 
