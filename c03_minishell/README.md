@@ -1,6 +1,12 @@
 # Minishell
 
-or like I would type minis-hell ;)
+or like I would call it: minis-hell ;)
+
+This is my dedicated testing site for the 42 minishell project in C.
+
+If you are evaluating somebody you can use this as an addon. __Make sure to also test what's inside the evaluation sheet!__
+
+[Also see the general tests for all projects.](https://github.com/poechlauerbe/42_tests)
 
 For testing use a suppression file (see folder) and something like this:
 ```

@@ -31,8 +31,9 @@ I'm still at the beginning of setting this up - so if you have any ideas / add o
 Know what you are doing - learn about your testing tools!
 _If you haven't accomplished a project - maybe try to test some project you find on github._
 
-Tests specially for the project - see other files in the github project
-- [c03 - philosophers](https://github.com/poechlauerbe/42_tests/tree/main/philosophers)
+Tests specially for the project - see other files in the github project:
+- [c02 - so long](https://github.com/poechlauerbe/42_tests/tree/main/c02_so_long)
+- [c03 - philosophers](https://github.com/poechlauerbe/42_tests/tree/main/c03_philosophers)
 - [c03 - minishell](https://github.com/poechlauerbe/42_tests/tree/main/minishell)
 
 
