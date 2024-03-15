@@ -6,6 +6,8 @@ If you like it - it would be nice of you to leave a star :)
 
 I'm still at the beginning of setting this up - so if you have any ideas / add ons - let me know via the [discussion forum here on github](https://github.com/poechlauerbe/42_tests/discussions/1) or via [email](bpochlau@student.42vienna.com).
 
+At the moment this site and the subsites are __IN PROGRESS__
+
 ## general tests:
 - nm -u program // to see the external used functions
 - input: wrong argc, digits mixed with letters
