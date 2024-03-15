@@ -29,7 +29,7 @@ I'm still at the beginning of setting this up - so if you have any ideas / add o
 - Let some malloc/function fail manually and see if everything is freed correctly (you can use static ints if some function is called more than once and for example let the 4. call of the function fail with some if + return/exit function which is used at that point. Best place is to put it just before the malloc / function.
 
 Know what you are doing - learn about your testing tools!
-_If you haven't accomplished a project - maybe try to test some project you find on github._
+_If you haven't accomplished a project - maybe try to test some project you find on github first._
 
 Tests specially for the project - see other files in the github project:
 - [c02 - so long](https://github.com/poechlauerbe/42_tests/tree/main/c02_so_long)

@@ -51,16 +51,36 @@ __NO exit function ALLOWED!!!!__
 ```
 ./philo 2 650 600 200 2
 ```
+- Shouldn't run - eventually print some error:
+```
+./philo 2 800 200 200 0
+```
+
+- Shouldn't run and print some error:
+```
+./philo 3 600 200 200 -
+```
+
+Should print some error:
+```
+./philo 3 -600 200 200
+```
 
 5. Test with ulimit to check if the mallocs are protected
-- with ulimit you have to play arround a little to get the right size 
+- __with ulimit you have to play arround a little to get the right size!!__
 
+- just test if you get some error if there is not enough memory 
 ```
 (ulimit -v 10000 ; ./philo 5 800 200 200)
 ```
 
 ```
 (ulimit -v 130000 ; valgrind ./philo 5 800 200 200)
+```
+
+- Should print that the creation fails, but no other error.
+```
+(ulimit -v 520000 ; valgrind --tool=helgrind ./philo 200 800 200 200)
 ```
 
 ## Check the code:
