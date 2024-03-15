@@ -43,3 +43,7 @@ Yours
 Benjamin
 
 _P.s.: always be nice and polite when evaluating someone's project! They put lots of hours inside and are hoping to pass - so don't put them down! We are here to learn! Be part of an enviroment where people can trust and learn from each other. And sure - try to help people to get better coders!_
+
+
+## Hall of fame of contributors:
+- [Thorben](https://github.com/Thorero92)
