@@ -8,7 +8,7 @@ Also see in terminal:
 ```
 man valgrind
 ```
-Most of that is from the manual - and some comments from my side.
+Most of this is from the manual - and some comments from my side.
 
 ## Standard use:
 ```
@@ -61,3 +61,34 @@ __ATTENTION: If you use the the terminal of VSCode - you will have some extra fi
 ### --log-socket=<ip-address:port-number>
 
 ## ERROR-RELATED OPTIONS
+
+
+
+
+## Nice stuff I don't use/define:
+
+### --xml=<yes|no> [default: no]
+
+#### --xml-fd=<number> [default: -1, disabled]
+
+#### --xml-file=<filename>
+
+#### --xml-socket=<ip-address:port-number>
+
+#### --xml-user-comment=<string>
+
+### --demangle=<yes|no> [default: yes]
+
+### --num-callers=<number> [default: 12]
+
+### --unw-stack-scan-thresh=<number> [default: 0] ,
+### --unw-stack-scan-frames=<number> [default: 5]
+
+### --error-limit=<yes|no> [default: yes]
+
+### --error-exitcode=<number> [default: 0]
+
+### --exit-on-first-error=<yes|no> [default: no]
+
+### --error-markers=<begin>,<end> [default: none]
+
