@@ -12,3 +12,17 @@ IN PROGRESS!!
 ```
 valgrind ./so_long
 ```
+With valgrind test:
+- Create/open map without .ber ending - shouldn't open
+- Create/open map wit .ber+ ending - shouldn't open
+- Test Esc Button
+- Test Click on x
+- Rename one of the sprites and then open the map
+
+- Change the permissions of a map:
+```
+chmod 000 invalid_no_rights.ber
+```
+
+
+  
