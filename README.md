@@ -15,7 +15,7 @@ At the moment this site and the subsites are __IN PROGRESS__
 - Check with ulimits
 - Check with valgrind (also with options like --track-fds=yes for open file descriptors)
 	- valgrind --leak-check=full --show-leak-kinds=all --track-fds=yes
-- Check with funcheck (is limited with multiprocess stuff)
+- Check with [funcheck](https://github.com/tmatis/funcheck) (is limited with multiprocess stuff)
 - Check edgecases (INT_MAX, INT_MIN)
 	- Int min: -2147483648
 	- Int max: 2147483647
