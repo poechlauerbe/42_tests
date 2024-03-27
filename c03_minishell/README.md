@@ -91,28 +91,28 @@ echo $?
 exit
 ```
 2. exit with numeric arguments:
-	- exit 123 - return value should be 123
+- exit 123 - return value should be 123
 ```
 exit 123
 ```
-	- exit 257 -return value should be 1
+- exit 257 -return value should be 1
 ```
 exit 257
 ```
-	- exit with value bigger than long max - return value 1 and exit
+- exit with value bigger than long max - return value 1 and exit
 ```
 exit 1111111111111111111111111111111111
 ```
 3. exit with wrong arguments:
-	- exit asdf - exit and return value 2
+- exit asdf - exit and return value 2
 ```
 exit asdf
 ```
-	- no exit and return value 1
+- no exit and return value 1
 ```
 exit 123 asdf
 ```
-4. exit in pipe - shouldn't exit and print anything:
+4. exit in pipe - shouldn't exit and shouldn't print anything:
 ```
 exit | exit | exit
 ```
