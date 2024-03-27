@@ -10,7 +10,7 @@ If you are evaluating somebody you can use this as an addon. __Make sure to also
 
 1. Check for data races and lock errors with valgrind:
 ```
-valgrind --tools=helgrind ./philo
+valgrind --tool=helgrind ./philo
 ```
 - The execution of helgrind will slow down the whole execution of the process - so append the time to die a little.
 - _If you only get one statement that somebody died there is a big chance that you have to modify the monitoring loop with something like usleep(100). Don't forget to remove it for the standard test!_
@@ -96,6 +96,6 @@ Should print some error:
 
 4. Check if the error is returned properly to the main.
 
-_I also implemented checking if this functions fail:
-- usleep (will fail if input is higher than unsigned int max)
-- gettimeofday_
+_I also implemented checking if this functions fail:_
+- _usleep (will fail if input is higher than unsigned int max)_
+- _gettimeofday_
