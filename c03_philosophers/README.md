@@ -26,6 +26,24 @@ valgrind --tool=helgrind ./philo
 
 __NO exit function ALLOWED!!!!__
 
+## Parsing
+1. I would print some error:
+```
+./philo "" "" "" "" ""
+```
+2. I would print some error:
+```
+./philo 0 0 0 0 0
+```
+3. I would print some error:
+```
+./philo 0 0 0 0
+```
+4. At least here should be some error:
+```
+./philo 2 850a 200b00 200c 5
+```
+
 ## Some testcases and why (test it with and without helgrind):
 
 1. Test on your own if a synchronization for odd numbers is implemented:
@@ -69,7 +87,7 @@ Should print some error:
 5. Test with ulimit to check if the mallocs are protected
 - __with ulimit you have to play arround a little to get the right size!!__
 
-- just test if you get some error if there is not enough memory 
+- just test if you get some error if there is not enough memory
 ```
 (ulimit -v 10000 ; ./philo 5 800 200 200)
 ```
