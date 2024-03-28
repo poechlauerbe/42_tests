@@ -57,6 +57,15 @@ nm -u
 ```
 asdf
 ```
+6. error with pipe:
+```
+| echo hi
+```
+7. error with pipe:
+```
+echo hi | echo hi |
+```
+
 
 ### echo
 1. Test if the echo is not using /bin/echo - it should print: -e hallo
@@ -132,13 +141,43 @@ echo "" "        h           a           "
 ```
 should output something different than:
 ```
-echo          h           a           "
+echo          h           a
 ```
+
+- should print an error:
+```
+"echo hi"
+```
+- should print: hi
+```
+"echo" hi
+```
+
+- should print a list of files in the actual directory:
+```
+"ls"
+```
+
+
 
 ### Single Quotes
 
-
-
+- should print: hi
+```
+'echo' hi
+```
+- should print a list of files in the actual directory:
+```
+'ls'
+```
+- should print an error:
+```
+'echo hi'
+```
+- should print without expanding variables:
+```
+echo hi '$USER is great, home is $HOME'
+```
 
 ### export
 
@@ -146,10 +185,43 @@ echo          h           a           "
 
 ### cd
 
-
+```
+mkdir a
+```
+```
+cd a
+```
+```
+mkdir b
+```
+```
+cd b
+```
+```
+rm -rf ../../a
+```
+- after all that this should cause an error:
+```
+cd ..
+```
+- after all that - this should work:
+```
+pwd
+```
+- after all that this sould work:
+```
+cd /bin/
+```
 
 ### pwd
-
+- invalid option error:
+```
+pwd -adsf
+```
+- prints working directory
+```
+pwd asdf asdf adsf
+```
 
 ### Environment path
 
@@ -157,13 +229,55 @@ echo          h           a           "
 
 ### Redirection
 
+#### Input
 
+
+#### Output
+
+
+#### Append
+
+
+#### Heredoc
+- delimiter should be $USER
+```
+cat << $USER
+```
+- delimiter EOF (write f.e. $USER into the heredoc - should be expanded)
+```
+cat << EOF
+```
+- delimiter EOF (write f.e. $USER into the heredoc - should not be expanded)
+```
+cat << EOF""
+```
+- delimiter is "a c" without quotes
+```
+cat << "a c"
+```
 ### Pipes
 
 
 ### Environment variables
-
-
+- should print with expanding the variables
+```
+echo hi "$USER is great, home is $HOME    and PWD:" $PWD
+```
+- command should be executed (resplitting)
+```
+export a="s -lsa"
+```
+```
+l$a
+```
+- should print only new line:
+```
+echo $""
+```
+- should print $:
+```
+echo $
+```
 
 ## Some go crazy
 
@@ -179,10 +293,6 @@ echo hi | < exist
 ```
 echo hi | < not_exist
 ```
-3. command should be executed
-```
-export a="s -lsa"
-l$a
-```
+
 
 echo hi < nonexist1 <nonexist2

@@ -114,6 +114,6 @@ Should print some error:
 
 4. Check if the error is returned properly to the main.
 
-_I also implemented checking if this functions fail (but I think I wouldn't do it again):_
-- _usleep (will fail if input is higher than unsigned int max)_
-- _gettimeofday_
+_I also implemented checking if this functions fail ():_
+- _usleep (will fail f.e. if input is higher than unsigned int max)_
+- _gettimeofday_ (will fail f.e. in case of the process has not permission accessing the system clock or signal interruption)
