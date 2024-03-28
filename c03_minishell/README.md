@@ -66,7 +66,6 @@ asdf
 echo hi | echo hi |
 ```
 
-
 ### echo
 1. Test if the echo is not using /bin/echo - it should print: -e hallo
 ```
@@ -162,7 +161,6 @@ echo          h           a
 e"ch"o hi
 ```
 
-
 ### Single Quotes
 
 - should print: hi
@@ -184,23 +182,31 @@ echo hi '$USER is great, home is $HOME'
 
 ### export
 
+- check for resplitting
+```
+export a="s -lsa"
+l$a
+```
 
+- check to not crash:
+```
+export a='"'
+$a
+```
+- check to not crash:
+```
+export a='"'
+echo $a
+```
 
 ### cd
 
+- special case which can crash a minishell:
 ```
 mkdir a
-```
-```
 cd a
-```
-```
 mkdir b
-```
-```
 cd b
-```
-```
 rm -rf ../../a
 ```
 - after all that this should cause an error:
@@ -226,20 +232,93 @@ pwd -adsf
 pwd asdf asdf adsf
 ```
 
+### Relative path
+- go to /bin - then you can use standard commands
+```
+cd /bin
+```
+- Now test with relative path:
+```
+./ls
+```
+```
+./cat
+```
+
 ### Environment path
+- first remove PATH - the commands shouldn't work after that.
+```
+unset PATH
+```
+- built-ins should work
+```
+echo hi
+```
+```
+env
+```
 
-
+- then test things like - should always print error:
+```
+ls
+```
+```
+cat
+```
+- this should still work:
+```
+/bin/ls
+```
+```
+/bin/cat
+```
+- change to /bin/ - inside this directory the standard commands should work:
+```
+ls
+```
+```
+cat
+```
 
 ### Redirection
 
 #### Input
+- make sure to create the "exists"
+```
+< nonexistant
+```
+```
+< exists
+```
+```
+<nonexistant
+```
+```
+<exists
+```
 
+```
+< nonexist | < exists | < nonexistent
+```
 
 #### Output
-
-
+- should print into a: hi (do this twice - it still should be only one hi inside)
+```
+echo hi > a
+```
+- should create 3 files(1,2,3) and write into three: hi this is a test
+```
+echo hi >1 >2 >3 this is a test
+```
 #### Append
-
+- should print into b: hi (do this twice -there should be 2x hi inside)
+```
+echo hi > b
+```
+- should create 3 files(4,5,6) and write into three: hi this is a test (do it twice - and the message should be twice inside)
+```
+echo hi >>4 >>5 >>6 this is a test
+```
 
 #### Heredoc
 - delimiter should be $USER
@@ -265,6 +344,10 @@ cat << EOF
 
 ### Pipes
 
+- basic pipe:
+```
+echo hi your pipe should work | cat | cat | cat | cat | cat | cat
+```
 - should stop after 5 seconds (check if child processes are processed in paralell)
 ```
  sleep 5 | sleep 5
@@ -297,7 +380,7 @@ echo $
 
 ## Some go crazy
 
-1. no sigpipe error
+1. no sigpipe error when pressing enter (you have to press enter twice to get out of the cat's execution)
 ```
 cat | cat | ls
 ```
@@ -311,7 +394,15 @@ echo hi | < not_exist
 ```
 
 3. Ambigious redirection
-
+```
+export a="a b"
+> $a
+```
+- should print three error messages:
+```
+export a="a b"
+echo > $a | echo > $a | echo > $a | echo hi
+```
 
 
 echo hi < nonexist1 <nonexist2
