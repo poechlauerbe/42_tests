@@ -10,7 +10,7 @@ If you are evaluating somebody you can use this as an addon. __Make sure to also
 
 [Also see the general tests for all projects.](https://github.com/poechlauerbe/42_tests)
 
-For testing use a suppression file (see folder) and something like this:
+For testing use a suppression file (see folder) and something like this (with this commands the leak of commands like ls will not be shown):
 ```
 valgrind --suppressions=suppression.txt --leak-check=full --show-leak-kinds=all --track-origins=yes --show-mismatched-frees=yes	--track-fds=yes ./minishell
 ```
@@ -158,6 +158,9 @@ echo          h           a
 "ls"
 ```
 
+```
+e"ch"o hi
+```
 
 
 ### Single Quotes
@@ -255,8 +258,21 @@ cat << EOF""
 ```
 cat << "a c"
 ```
+- check with "EOF " and " EOF" when in heredoc - shouldn't quit - quit only with "EOF"
+```
+cat << EOF
+```
+
 ### Pipes
 
+- should stop after 5 seconds (check if child processes are processed in paralell)
+```
+ sleep 5 | sleep 5
+```
+- should print some garbage - dev/urandom is an endless file ("tail" instead of "head" - you can only stop with Ctrl + C)
+```
+cat /dev/urandom | head
+```
 
 ### Environment variables
 - should print with expanding the variables
@@ -294,5 +310,11 @@ echo hi | < exist
 echo hi | < not_exist
 ```
 
+3. Ambigious redirection
+
+
 
 echo hi < nonexist1 <nonexist2
+
+
+__If you are not sure about some behaviour - compare with BASH!__
