@@ -64,12 +64,17 @@ __NO exit function ALLOWED!!!!__
 ./philo 3 650 20000 100 2
 ```
 
-4. One philo should die arround 599
+4. One philo should die arround 599 (try it a few times)
 ```
 ./philo 199 599 200 200 5
 ```
 
-5. Some other testcase:
+5. Scroll through and have a look if there are no jump backs (f.e. one philo prints timestamp 203 and the next has timestamp 202 - this is an error. Normally there should be a continuous flow with the timestamp being the same or moving up).
+```
+./philo 199 650 200 100 10
+```
+
+6. Some other testcase:
 - dietime should be arround 650 (max + 10ms)
 ```
 ./philo 2 650 600 200 2
@@ -84,12 +89,12 @@ __NO exit function ALLOWED!!!!__
 ./philo 3 600 200 200 -
 ```
 
-Should print some error:
+- Should print some error:
 ```
 ./philo 3 -600 200 200
 ```
 
-5. Test with ulimit to check if the mallocs are protected
+7. Test with ulimit to check if the mallocs are protected
 - __with ulimit you have to play arround a little to get the right size!!__
 
 - just test if you get some error if there is not enough memory (you have to play around so that the philos don't start to run, but the environment has enough memory - valgrind, etc.)
@@ -105,6 +110,7 @@ Should print some error:
 ```
 (ulimit -v 520000 ; valgrind --tool=helgrind ./philo 200 800 200 200)
 ```
+
 
 ## Check the code:
 
