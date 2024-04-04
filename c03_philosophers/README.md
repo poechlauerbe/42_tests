@@ -64,7 +64,12 @@ __NO exit function ALLOWED!!!!__
 ./philo 3 650 20000 100 2
 ```
 
-4. Some other testcase:
+4. One philo should die arround 599
+```
+./philo 199 599 200 200 5
+```
+
+5. Some other testcase:
 - dietime should be arround 650 (max + 10ms)
 ```
 ./philo 2 650 600 200 2
@@ -87,7 +92,7 @@ Should print some error:
 5. Test with ulimit to check if the mallocs are protected
 - __with ulimit you have to play arround a little to get the right size!!__
 
-- just test if you get some error if there is not enough memory
+- just test if you get some error if there is not enough memory (you have to play around so that the philos don't start to run, but the environment has enough memory - valgrind, etc.)
 ```
 (ulimit -v 10000 ; ./philo 5 800 200 200)
 ```
@@ -96,7 +101,7 @@ Should print some error:
 (ulimit -v 130000 ; valgrind ./philo 5 800 200 200)
 ```
 
-- Should print that the creation fails, but no other error.
+- Should print that the creation fails, but no other error. You have to play arround a bit to make shure that valgrind has enough memory. If the simulation is running and you see a message from helgrind disturbing the printing of the philos - it seems like the protection of pthread create doesn't work properly.
 ```
 (ulimit -v 520000 ; valgrind --tool=helgrind ./philo 200 800 200 200)
 ```
