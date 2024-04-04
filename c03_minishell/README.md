@@ -337,7 +337,15 @@ cat << EOF""
 ```
 cat << "a c"
 ```
-- check with "EOF " and " EOF" when in heredoc - shouldn't quit - quit only with "EOF"
+- check with "EOF " and " EOF" when in heredoc without quotes but with the spaces - shouldn't quit - quit only with "EOF"
+```
+cat << EOF
+```
+- press ctrl + d inside heredoc - should quit heredoc with a warning but not minishell
+```
+cat << EOF
+```
+-
 ```
 cat << EOF
 ```
