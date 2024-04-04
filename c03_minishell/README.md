@@ -341,6 +341,10 @@ cat << "a c"
 ```
 cat << EOF
 ```
+- check f.e. with ctrl + c if all heredocs are closed with one command
+```
+<< 1 | << 2 | << 3 cat
+```
 
 ### Pipes
 
