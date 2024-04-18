@@ -27,19 +27,19 @@ valgrind --tool=helgrind ./philo
 __NO exit function ALLOWED!!!!__
 
 ## Parsing
-1. I would print some error:
+1. Print some error:
 ```
 ./philo "" "" "" "" ""
 ```
-2. I would print some error:
+2. Print some error:
 ```
 ./philo 0 0 0 0 0
 ```
-3. I would print some error:
+3. Print some error:
 ```
 ./philo 0 0 0 0
 ```
-4. At least here should be some error:
+4. Print some error:
 ```
 ./philo 2 850a 200b00 200c 5
 ```
@@ -52,29 +52,34 @@ __NO exit function ALLOWED!!!!__
 ./philo 3 650 200 100 5
 ```
 
-2. Test if the process is stopped immedeatly after someone dies:
+2. Test if the sync doesn't harm the normal execution. No one should die
+```
+./philo 3 1000 200 700 5
+```
+
+3. Test if the process is stopped immedeatly after someone dies:
 - if you have to wait ten seconds until the program ends - it's not good
 ```
 ./philo 3 650 200 10000 2
 ```
 
-3. Test if the process is stopped immedeatly after someone dies:
+4. Test if the process is stopped immedeatly after someone dies:
 - somebody should die during eating and the process should be stopped
 ```
 ./philo 3 650 20000 100 2
 ```
 
-4. One philo should die arround 599 (try it a few times)
+5. One philo should die arround 599 (try it a few times)
 ```
 ./philo 199 599 200 200 5
 ```
 
-5. Scroll through and have a look if there are no jump backs (f.e. one philo prints timestamp 203 and the next has timestamp 202 - this is an error. Normally there should be a continuous flow with the timestamp being the same or moving up).
+6. Scroll through and have a look if there are no jump backs (f.e. one philo prints timestamp 203 and the next has timestamp 202 - this is an error. Normally there should be a continuous flow with the timestamp being the same or moving up).
 ```
 ./philo 199 650 200 100 10
 ```
 
-6. Some other testcase:
+7. Some other testcase:
 - dietime should be arround 650 (max + 10ms)
 ```
 ./philo 2 650 600 200 2
