@@ -1,5 +1,7 @@
 # 42 so long tests/evaluation
 
+Subject Version: 3 (English)
+
 This is my dedicated testing site for the 42 so long project in C.
 
 If you are evaluating somebody you can use this as an addon. __Make sure to also test what's inside the evaluation sheet!__

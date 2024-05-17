@@ -1,6 +1,6 @@
 # 42 FT_PRINTF tests/evaluation
 
-IN PROGRESS
+Subject Version: 10 (English)
 
 ft_printf has to be tested with a main.
 - check for return value. (lenght of string printed)
@@ -10,6 +10,7 @@ ft_printf has to be tested with a main.
 
 ## Test main:
 - change only the two statements where NULL is inside the ft_printf and printf function.
+- your testing should also be with the -Werror -Wextra -Wall flags.
 ```
 #include <stdio.h>
 int main(void)

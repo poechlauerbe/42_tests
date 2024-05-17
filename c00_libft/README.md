@@ -1,5 +1,7 @@
 # 42 LIBFT tests/evaluation
 
+Subject Version: 15 (English)
+
 First project in the common core of the 42 curriculum. A lot of functions which can and will be used in later projects.
 
 Some behaviour of the functions in my opinion is weird. So best test with a tester like francinette:

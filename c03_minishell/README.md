@@ -1,5 +1,7 @@
 # Minishell
 
+Subject Version: 7.1 (English)
+
 or like I would call it: minis-hell ;)
 
 This is my dedicated testing site for the 42 minishell project in C.

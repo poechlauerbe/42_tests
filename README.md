@@ -22,6 +22,7 @@ At the moment this site and the subsites are __IN PROGRESS__
 - Check not allowed input (empty quotes "", " ", wrong signs)
 	- "" shouldn't be handled as 0
 - Check too many/less arguments
+- Read the subject and think about tests for the specific project - what could crash the program (wrong maps, wrong input, high workload of the processor, ...)
 
 ## Check the code:
 - suggestion: use vscode by typing `code .` into the terminal when you are in the project directory
