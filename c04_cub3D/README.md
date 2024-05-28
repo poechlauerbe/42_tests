@@ -1,4 +1,4 @@
-# 42 Philosophers tests/evaluation
+# 42 Cub3D tests/evaluation
 
 IN PROGRESS
 
