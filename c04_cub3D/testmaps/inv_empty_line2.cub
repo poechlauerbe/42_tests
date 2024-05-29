@@ -1,12 +1,12 @@
-NO ./images/NO.xpm
-SO ./images/SO.xpm
-WE ./images/WE.xpm
-EA ./images/EA.xpm
+NO ./img/north_wall_1200.xpm
+SO ./img/south_wall_1200.xpm
+WE ./img/west_wall_1200.xpm
+EA ./img/east_wall_1200.xpm
 F 110,153,15
 C 255,255,255
 
         1111111111111111111111111
- 
+
         1000000000000000000000001
         1100000000000000000000001
         1000000000000000000000001
